@@ -1,0 +1,6 @@
+TaskID : 343903
+Project : M7_WL_K44_SENSE55_VZW_MR
+SKU : VERIZON WWE[1540]
+ROM Ver : 4.06.1540.3
+Customization Id : 612921
+RCMS Id : 189

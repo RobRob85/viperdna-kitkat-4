@@ -1,0 +1,5 @@
+﻿Project: M7_WL_K44_SENSE55_VZW_MR
+SKU: VERIZON WWE ROM
+ROM Build ID: 612921
+Build ID: 612922; SKU: VERIZON WWE ROM default; CID: default; MNS: default
+Datetime: 2013/12/11 16:42:52
