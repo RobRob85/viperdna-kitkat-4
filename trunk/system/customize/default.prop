@@ -1,6 +1,5 @@
 tweaks_hide_qs=0
 tweaks_systemui_weatherloc=Current
-tweaks_extended_statusbartext=7
 tweaks_widget_switch=-1
 tweaks_systemui_notificationcount=1
 tweaks_minfree=8192,10240,12288,14336,16384,20480
@@ -22,13 +21,11 @@ HIDE_NAV_BAR=1
 sleep_mode_mode=1
 htc_gestures_enabled=0
 
-tweaks_custom_statusbartext=ViperOne
+tweaks_custom_statusbartext=ViperDNA
 tweaks_carrier_icon=1
-tweaks_longpress_back=15
-tweaks_shortpress_backdouble=0
-tweaks_shortpress_homedouble=1
-tweaks_systemui_theme_battery=percentage_battery_v2
-tweaks_longpress_home=15
+tweaks_longpress_back=7
+tweaks_longpress_home=14
 tweaks_horizontal_qs=1
-tweaks_shortpress_home_swipe=14
 tweaks_shortpress_home=22
+tweaks_shortpress_recent=15
+

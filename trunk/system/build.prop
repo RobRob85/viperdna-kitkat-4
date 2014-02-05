@@ -73,7 +73,7 @@ ro.build.type=user
 ro.build.user=root
 ro.build.host=abm007
 ro.build.tags=release-keys
-ro.product.model=HTC6435LVW
+ro.product.model=dlx
 ro.product.brand=VERIZON
 ro.product.name=dlx
 ro.product.device=dlx
@@ -95,7 +95,7 @@ ro.build.fingerprint=VERIZON/m7wlv/m7wlv:4.4/KRT16S/283265.2:user/release-keys
 ro.build.characteristics=nosdcard
 ro.build.project=M7_UL_K44_SENSE55_MR:342600
 ro.build.sku=BrightstarUS WWE
-ro.product.version=ViperDNA 4.0.0
+ro.product.version=ViperDNA 3.0.0
 ro.build.languageremove=0
 ro.build.sense.version=5.5
 ro.build.description=4.06.1540.3 CL283265 release-keys
@@ -199,8 +199,11 @@ htc.audio.global.state=0
 htc.audio.global.profile=0
 htc.audio.q6.topology=0
 htc.audio.global.speaker=1
-# Disable the off load for currently since this effect is under implementing.
-audio.offload.disable=0
+# System prop for VoLTE support
+ro.baseband.volte=false
+# System props for inbox bundle headset info
+persist.htc.audio.inbox.profile=max300_2vol_20130219
+
 
 #
 # system prop for opengles version
@@ -223,7 +226,7 @@ ro.ril.transmitpower=true
 persist.radio.jbims=1
 
 # For workaround for ro.baseband property. QCT use the property same as radio version to determine the architecture.
-# But we hard code to mdm for M7.
+# But we hard code to mdm for DLX.
 ro.baseband.arch = mdm
 
 #Add default network type for phone reference
@@ -309,6 +312,7 @@ persist.camera.tuning_spec=htc
 persist.sys.dalvik.vm.lib=libdvm.so
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
+persist.service.adb.enable=1
 qemu.hw.mainkeys=1
 
 # Disable sending data and logging
@@ -317,8 +321,6 @@ ro.kernel.android.checkjni=0
 profiler.force_disable_ulog=1
 profiler.force_disable_err_rpt=1
 
-# Disable USB debugging icon on statusbar
-persist.adb.notify=0
 # Disable Bytecode Verification
 dalvik.vm.verify-bytecode=false 
 dalvik.vm.dexopt-flags=v=n,o=v,m=y
@@ -330,9 +332,6 @@ ro.config.venom.nocheckin=0
 ro.config.venom.noappupdate=0
 settings.fota.saveto=cache
 
-
-#Venom Tweaks
-venom.tweaks.show_donation_dialog=0
 
 # Venom HUB
 venom.hub.device=dlx

@@ -1,0 +1,41 @@
+ViperDNA 2.5.0 Release Candidate 1 ---- Team Venom 
+
+-updated to official Verizon Wireless Sense 5 / 4.2.2 ota 3.06.605.4
+-stock kernel
+-developer options and app associations added back to settings
+-htc powermanager added back
+-added back other missing htc stuff (task manager, etc)
+-blinkfeed toggle available natively in peronalize, doesnt need initial reboot to show up
+
+-new tweaks/things in 2.5.0
+recent key longpress mapping
+aosp lockscreen custom wallpaper (will use same custom lockscreen wallpaper as what is set in personalize - lockscreen - wallpaper lockscreen)
+additional stock quicksetting tiles
+user tile available as quick setting on htc vertical quick settings
+additional native quick setting tiles
+additional animations available in tweaks
+set level of transparency in navbar for both homescreen and app drawer (previously was just fully transparent or not)
+custom aosp lockscreen shortcuts (can map up to 4 just like on sense lockscreen)
+custom gesture in statusbar pulldown area to launch actions/apps
+toggle for 4x1 clockwidget transparency (also removes weather background on 4x2 clock)
+tweak to switch black and white weather icons on lockscreen/app drawer/4x1 clock to sense4+ color versions
+change ratio of news/social media/local media/ in blinkfeed (useful so facebook doesnt overwhelm your feed)
+change from 1-99 feed pages in blinkfeed
+custom auto sync interval for blinkfeed from 5 mins to 12 hours
+tweak to enable/disable slide2unlock (not sweep2wake thats different)
+longpress on menu on lockscreen action tweak added
+animated statusbar app drawer support from viperdna 1.3.x (tab will be restored to venom hub to download them)
+
+-removed tweaks/mods/features
+double press button mapping
+home swipe button mapping
+venom navbar and underlay packs 
+venom pie 
+--some of these (and other missing tweaks) will probably be back in coming updates, we will see :P
+
+-bugs
+market icon packs are buggy right now with prism; incorrectly size app drawer icons, and unable to change to custom icon for app drawer
+aroma app removal may not be up to date
+you tell me! its essentially an open beta (though clearly better than beta status)
+
+

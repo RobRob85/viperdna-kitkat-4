@@ -17,8 +17,8 @@
 <permissions>
     <feature name="com.htc.software.HTC" />
     <feature name="com.htc.software.Sense5.5" />
-    <feature name="com.htc.software.M7" />
-    <feature name="com.htc.software.BrightStarUS" />
+    <feature name="com.htc.software.DLX" />
+    <feature name="com.htc.software.Verizon" />
     <feature name="com.htc.software.WWE" />
     <feature name="com.htc.software.PlayGroup1" />
 </permissions>
