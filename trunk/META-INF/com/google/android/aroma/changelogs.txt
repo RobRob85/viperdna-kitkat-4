@@ -65,7 +65,7 @@ hide 4.3/4.4 notifications
 hide volume warning when using high volumes
 custom notification screen from any app
 display wifi activity (like data icon) from aosp
-choose different signal icons (verizon, new sprint, att, tmo, stock sense)
+choose different signal icons (verizon, new sprint, att, tmo, lte, stock sense)
 5 or 6 signal bar count
 always display data icon even when connected to wifi
 block pulldown during calls
