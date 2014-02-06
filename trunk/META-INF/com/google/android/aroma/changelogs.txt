@@ -29,6 +29,7 @@ double tap statbar to turn screen off
 
 Prism
 venom navbars from 2.0.x are back
+icon packs are no longer buggy with app drawer icon (issue in 2.5.x)
 custom app for app drawer shorcut
 homescreen layouts (4x4,4x5,5x6)
 add any (up to several) custom apps to prism homescreen menu, and reorder/remove exist ones
@@ -46,6 +47,10 @@ change blinkfeed color
 
 Lockscreen
 add back home swipe on lockscreen option
+go to first widget page on unlock
+custom lockscreen background (removed from sense by htc)
+bypass lockscreen/no lock option (removed from sense by htc)
+show next alarm under carrier label
 
 Buttons/Gestures
 configure button brightness strength
