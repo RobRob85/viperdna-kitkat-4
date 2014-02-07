@@ -1,8 +1,8 @@
 ViperDNA 3.0.0 Release Candidate ---- Team Venom 
 
 Updated to Android 4.4 / Sense 5.5
-Based ViperONE 4.3.0 m7 
 Rom Base : 4.06.1540.3 CL283265 release-keys
+Tweaks Based ViperONE 4.3.0  
 Venom SuperUSER
 Venom Tweaks
 Venom FileManager
