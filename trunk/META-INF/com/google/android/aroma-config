@@ -54,6 +54,39 @@ textbox(
  resread("changelogs.txt")
 );
 
+########################Carriers##############################
+
+menubox(
+  "Provider",
+  "Please select:",
+  "icons/apps",
+  "network.prop",
+
+    "Verizon","","@vzw",
+    "GSM","","@gsm"
+);
+
+if
+    file_getprop("/tmp/aroma/network.prop","selected") == "1"
+then
+  writetmpfile(
+    "bigred.prop",
+      "selected=0\n"
+      
+  );
+endif;
+
+if
+    file_getprop("/tmp/aroma/network.prop","selected") == "2"
+then
+
+  writetmpfile(
+    "mabell.prop",
+      "selected=0\n"
+      
+  );
+endif;
+
 ########################Launcher##############################
 
 
