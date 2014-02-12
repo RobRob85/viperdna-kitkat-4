@@ -2,6 +2,7 @@ ViperDNA 3.0.0 Release Candidate ---- Team Venom
 
 Updated to Android 4.4 / Sense 5.5
 Rom Base : 4.06.1540.3 CL283265 release-keys
+Kernel: Zarboz Stock 3.4.10 for 4.4; M7 Based
 Tweaks Based ViperONE 4.3.0  
 Venom SuperUSER
 Venom Tweaks
@@ -11,7 +12,7 @@ Venom SoundEnhancer
 Venom Button Manager
 Venom SideBar/Small Apps
 Venom PIE
-Enhanced Camera
+Venom Camera w/ Zoe enabled
 Busybox
 Init.D Scripts Enabled
 Cm cLock Widget (modified framework to support it)
