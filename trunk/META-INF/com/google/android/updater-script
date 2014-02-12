@@ -39,7 +39,10 @@ then
 	delete("/system/app/VZW_VMM_HUX.apk");				
 	delete("/system/app/VVM.apk");	
 	delete("/system/framework/com.verizon.ims.jar");				
-	delete("/system/framework/com.verizon.phone.jar");		
+	delete("/system/framework/com.verizon.phone.jar");	
+	delete("/system/build/prop");				
+	delete("/system/customize/MNS/default.xml");
+    package_extract_dir("additions/gsm", "/system/");
 endif;
 
 ########################UI Options########################
@@ -115,6 +118,251 @@ then
     delete("/system/priv-app/HtcScreenTimeoutWidget.apk");
     delete("/system/priv-app/HtcSyncWidget.apk");
 endif;
+
+#######################HTC App Removal########################  
+
+      ui_print("@Removing HTC Apps");
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.1") == "1" then
+         ui_print("   Removing HTC Flashlight");
+         delete("/system/app/Flashlight.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.2") == "1" then
+         ui_print("   Removing HTC Notes");
+         delete("/system/priv-app/HtcNotes.apk");
+         delete("/system/app/HtcNotesPainterView.apk");
+         delete("/system/priv-app/HtcNotesProvider.apk");
+         delete("/system/app/Htc3DRichNotesWidget.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/htc.prop","item.0.3") == "1" then
+         ui_print("   Removing HTC Gallery");
+         delete("/system/priv-app/HTCAlbum.apk");
+         delete("/system/priv-app/HtcPhotoEnhancer.apk");
+         delete("/system/priv-app/HtcPhotoWidget.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/htc.prop","item.0.4") == "1" then
+         ui_print("   Removing HTC Live Wallpapers");
+         delete("/system/app/HoloSpiral.apk");
+         delete("/system/priv-app/HtcLavaLiveWallpaper.apk");
+         delete("/system/priv-app/HtcWeatherLiveWallpaper.apk");
+         delete("/system/app/PhaseBeam.apk");
+         delete("/system/app/StreakLiveWallpaper.apk");
+         delete("/system/app/MagicSmoke.apk");
+         delete("/system/app/NoiseField.apk");
+         delete("/system/app/MusicVisualization.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.5") == "1" then
+         ui_print("   Removing HTC Mail");
+         delete("/system/priv-app/Mail.apk");
+         delete("/system/priv-app/HtcMailWidgets.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.6") == "1" then
+         ui_print("   Removing HTC Message");
+         delete("/system/priv-app/Message.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.7") == "1" then
+         ui_print("   Removing HTC Music");
+         delete("/system/priv-app/HtcMusic.apk");
+         delete("/system/app/HtcMusicEnhancer.apk");
+         delete("/system/priv-app/HtcMusicWidget.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.8") == "1" then
+         ui_print("   Removing HTC Task");
+         delete("/system/priv-app/MyTask.apk");
+         delete("/system/priv-app/MyTaskWidget.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.9") == "1" then
+         ui_print("   Removing HTC Stocks");
+         delete("/system/priv-app/Stock.apk");
+         delete("/system/app/StockWidget.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.10") == "1" then
+         ui_print("   Removing HTC Weather");
+         delete("/system/priv-app/Weather.apk");
+         delete("/system/priv-app/WeatherProvider.apk");
+         delete("/system/priv-app/WeatherSyncProvider.apk");
+         delete("/system/priv-app/HtcWeatherClockWidget.apk");
+         delete("/system/priv-app/HtcWeatherLiveWallpaper.apk");
+         delete("/system/app/HtcWeatherWallpaper.apk");
+         delete_recursive("/system/media/weather");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.11") == "1" then
+         ui_print("   Removing HTC WorldClock");
+         delete("/system/priv-app/WorldClock.apk");
+         delete("/system/app/HtcClockWidget.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.12") == "1" then
+         ui_print("   Removing HTC TaskManager");
+         delete("/system/app/TaskManager.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.13") == "1" then
+         ui_print("   Removing HTC Car");
+         delete("/system/priv-app/Automotive_Home.apk");
+         delete("/system/priv-app/Automotive_InternetRadio.apk");
+         delete("/system/priv-app/Automotive_Traffic.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.14") == "1" then
+         ui_print("   Removing HTC Sound Recorder");
+         delete("/system/app/HtcSoundRecorder.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.15") == "1" then
+         ui_print("   Removing HTC Browser");
+         delete("/system/priv-app/Browser.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.16") == "1" then
+         ui_print("   Removing HTC Calculator");
+         delete("/system/app/Calculator.apk");
+         delete("/system/app/CalculatorWidget.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/htc.prop","item.0.17") == "1" then
+         ui_print("   Removing HTC Calendar");
+         delete("/system/priv-app/Calendar.apk");
+         delete("/system/priv-app/HtcCalendarWidgets.apk");
+      endif;
+
+	  
+#######################Google and Market App Removal########################  
+
+      ui_print("@Removing User Apps");
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.1") == "1" then
+         ui_print("   Removing Google Voice");
+         delete("/data/app/com.google.android.apps.googlevoice-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.2") == "1" then
+         ui_print("   Removing Facebook");
+         delete("/system/app/Facebook.apk");
+         delete("/system/app/FacebookEngine.apk");
+         delete("/data/app/com.facebook.katana-1.apk");
+         delete("/system/app/Facebook_Client.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.3") == "1" then
+         ui_print("   Removing Flickr");
+         delete("/system/priv-app/Flickr.apk");
+         delete("/system/app/FlickrEngine.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.4") == "1" then
+         ui_print("   Removing Twitter");
+         delete("/system/app/Twitter.apk");
+         delete("/system/app/TwitterEngine.apk");
+         delete("/data/app/com.twitter.android-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.5") == "1" then
+         ui_print("   Removing Dropbox");
+         delete("/data/app/com.dropbox.android-1.apk");
+         delete("/system/app/MyDropbox.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.6") == "1" then
+         ui_print("   Removing Picasa");
+         delete("/system/priv-app/Picasa_GLRplugin.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.7") == "1" then
+         ui_print("   Removing Gmail");
+         delete("/data/app/com.google.android.gm-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.8") == "1" then
+         ui_print("   Removing YouTube");
+         delete("/data/app/com.google.android.youtube-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.9") == "1" then
+         ui_print("   Removing TalkBack");
+         delete("/data/app/com.google.android.marvin.talkback-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.10") == "1" then
+         ui_print("   Removing FaceLock");
+         delete("/system/app/FaceLock.apk");
+         delete("/system/lib/libfacelock_jni.so");
+         delete_recursive("/system/vendor/pittpatt");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.11") == "1" then
+         ui_print("   Removing Google Plus");
+         delete("/data/app/com.google.android.apps.plus-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.12") == "1" then
+         ui_print("   Removing Google Maps");
+         delete("/data/app/com.google.android.apps.maps-1.apk");
+         delete("/data/app/com.google.android.street-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.13") == "1" then
+         ui_print("   Removing Google News");
+         delete("/system/app/GenieWidget.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.14") == "1" then
+         ui_print("   Removing Google Hangout");
+         delete("/data/app/com.google.android.talk-1.apk");
+         delete("/system/app/com.google.android.talk-1.apk");		 
+         delete("/system/app/Talk.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.15") == "1" then
+         ui_print("   Removing Google TTS");
+         delete("/system/app/GoogleTTS.apk");
+         delete_recursive("/system/tts");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.16") == "1" then
+         ui_print("   Removing Google Books");
+         delete("/data/app/com.google.android.apps.books-1.apk");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.17") == "1" then
+         ui_print("   Removing TuneIn Radio");
+         delete("/data/app/tunein.player-1.apk");
+         delete("/system/lib/libtunein.oem.so");
+      endif;
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.18") == "1" then
+         ui_print("   Removing SoundHound");
+         delete("/data/app/com.melodis.midomiMusicIdentifier.freemium-1.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.19") == "1" then
+         ui_print("   Removing Titanium Backup");
+         delete("/data/app/com.keramidas.TitaniumBackup-1.apk");
+      endif;
+
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.20") == "1" then
+         ui_print("   Removing Google Videos");
+         delete("/data/app/com.google.android.videos-1.apk");
+      endif;
+	  
+      if	file_getprop("/tmp/aroma-data/remove.prop","item.0.21") == "1" then
+         ui_print("   Removing Google Magazines");
+         delete("/data/app/com.google.android.apps.magazines-1.apk");
+      endif;	
+
+      if file_getprop("/tmp/aroma-data/remove.prop","item.0.22") == "1" then
+         ui_print("   Removing Jetcet Print");
+         delete("/system/priv-app/JETCET_PRINT_S50.apk");
+         delete("/system/priv-app/JETCET_PRINT_Resources.apk");
+      endif;
 
 #######################Creating Symlinks########################
 

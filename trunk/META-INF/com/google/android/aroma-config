@@ -48,6 +48,13 @@ agreebox(
 );
 
 textbox(
+  "credits",
+  "ViperDNA Credits",
+  "icons/info",
+ resread("credits.txt")
+);
+
+textbox(
   "Changelog",
   "ViperDNA Changelog",
   "icons/info",
@@ -89,7 +96,6 @@ endif;
 
 ########################Launcher##############################
 
-
 menubox(
   "Launcher Options",
   "Please select preferred launcher below:",
@@ -98,7 +104,7 @@ menubox(
 
   
   "Sense","","@htc",
-  "Google Home","You will be prompted on next screen to desense","@google"
+  "Google Home","","@google"
 );
 
 if prop("launcher.prop","selected")=="1"  then
@@ -106,7 +112,8 @@ if prop("launcher.prop","selected")=="1"  then
 
 else
 selectbox(
-  "Do you want to remove Sense Completely?",
+  "You chose to remove Prism",
+  "Do you want the rest of Sense?",
   "icons/apps",
   "desense.prop",
   
@@ -115,6 +122,63 @@ selectbox(
 );
 
 endif; 
+
+########################App Removal##############################
+
+checkbox(
+  "Remove HTC Apps",
+  "Check the ones you want to de-install",
+  "icons/personalize",
+  "htc.prop",
+  
+		"HTC Flashlight",       "",  0,  
+		"HTC Notes",            "",  0,
+		"HTC Gallery",          "",  0,
+		"HTC Live Wallpapers",  "",  0,
+		"HTC Mail",             "",  0,  
+		"HTC Messages",         "",  0,
+		"HTC Music",            "",  0,
+		"HTC Task",             "",  0,
+		"HTC Stocks",           "",  0,
+		"HTC Weather",          "",  0,
+		"HTC WorldClock",       "",  0,
+		"HTC TaskManager",      "",  0,
+		"HTC Car",              "",  0, 
+		"HTC Sound Recorder",   "",  0, 
+		"HTC Browser",          "",  0, 
+		"HTC Calculator",       "",  0, 
+		"HTC Calendar",         "",  0
+);
+
+checkbox(
+  "Remove Google and Market Apps",
+  "Check the ones you want to de-install",
+  "icons/personalize",
+  "remove.prop",
+  
+		"Google Voice",  		"",  0,
+  		"Facebook",             "",  0,
+		"Flickr",               "",  0,
+		"Twitter",              "",  0,
+		"DropBox",              "",  0,
+		"Picasa",               "",  0,
+		"Gmail",                "",  0,
+		"YouTube",              "",  0,
+		"TalkBack",             "",  0,
+		"FaceLock",             "",  0,
+		"Google Plus",          "",  0,
+		"Google Maps",          "",  0,
+		"Google News",          "",  0,
+		"Google Hangout",       "",  0,
+		"Google TTS",           "",  0,
+		"Google Books",         "",  0, 
+		"TuneIn Radio",         "",  0,
+		"SoundHound",           "",  0,
+		"Titanium Backup",      "",  0,
+		"Google Videos", 		"",  0,
+		"Google Magazines",     "",  0,	
+		"JetCet Print",         "",  0
+);
 
 #######################################################
 

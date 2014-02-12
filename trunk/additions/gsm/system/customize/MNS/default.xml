@@ -34,14 +34,14 @@
     <module name="defaultTimeFormatSetting">
       <function>
         <set name="single">
-          <item name="default">EE, MMM d, yyyy</item>
+          <item name="default">MM/d/yyyy</item>
         </set>
       </function>
     </module>
     <module name="defaultTimeFormatSettingShort">
       <function>
         <set name="single">
-          <item name="default">EE, MMM d</item>
+          <item name="default">MM/d</item>
         </set>
       </function>
     </module>
@@ -51,11 +51,6 @@
       <function name="resource_path">
         <set name="single" max="1">
           <item name="path">/system/customize/resource/</item>
-        </set>
-      </function>
-      <function name="extra_ringtones">
-        <set name="plenty">
-          <item name="ringtone">VZW_Airwaves_1.mp3</item>
         </set>
       </function>
     </module>
@@ -84,12 +79,6 @@
       </function>
       <function name="applications_hide">
         <set name="plenty" max="7">
-          <item name="package">com.lmi.htc.rescue</item>
-          <item name="class">com.lmi.htc.rescue.RescueApp</item>
-        </set>
-        <set name="plenty" max="7">
-          <item name="package">com.mocana.vpn.android.gui</item>
-          <item name="class">com.mocana.vpn.android.gui.activity.MocanaVPNStartActivity</item>
         </set>
       </function>
       <function name="quick_launch_customization">
@@ -253,58 +242,50 @@
           <item name="MMS_Auto_Retrieve">true</item>
           <item name="MMS_Roaming_Auto_Retrieve">false</item>
           <item name="MMS_Priority">Normal</item>
-          <item name="MMS_Msg_Size1">200K</item>
-          <item name="MMS_Msg_Size2">500K</item>
-          <item name="MMS_Msg_Size3">1200K</item>
-          <item name="MMS_Msg_Size_Choose">1200K</item>
+          <item name="MMS_Msg_Size1">600K</item>
+          <item name="MMS_Msg_Size2">1000K</item>
+          <item name="MMS_Msg_Size3">3500K</item>
+          <item name="MMS_Msg_Size_Choose">600K</item>
           <item name="MMS_Received_Notify">true</item>
           <item name="MMS_Play_Received_Notify">true</item>
-          <item name="MMS_Received_Viberation">false</item>
+          <item name="MMS_Received_Viberation">true</item>
           <item name="MMS_Sent_Notify">false</item>
           <item name="MMS_Fail_Notify">true</item>
           <item name="MMS_Play_Notify">true</item>
           <item name="MMS_Notify_Sound">Default Ringtone</item>
-          <item name="MMS_Viberation">false</item>
-          <item name="MMS_Max_Recipient_Number">20</item>
+          <item name="MMS_Viberation">true</item>
+          <item name="MMS_Max_Recipient_Number">10</item>
           <item name="SMS_Max_Recipient_Number">250</item>
-          <item name="SMS_Max_Concatenated_Number">7</item>
+          <item name="SMS_Max_Concatenated_Number">5</item>
           <item name="MMS_Max_Slide_Number">10</item>
           <item name="MMS_Default_Slide_Duration">5000</item>
           <item name="RECIPT_Show_Sent_Msg_History">true</item>
           <item name="RECIPT_Show_Call_History">true</item>
-          <item name="RECIPT_Show_Email_Address">true</item>
-          <item name="MSG_Preview_Line">2</item>
+          <item name="RECIPT_Show_Email_Address">false</item>
+          <item name="MSG_Preview_Line">1</item>
           <item name="STORAGE_Del_Old_Msg">false</item>
           <item name="STORAGE_Text_Msg_Limit">200</item>
           <item name="STORAGE_MMS_Msg_Limit">20</item>
           <item name="SMS_Wap_Push_Support">true</item>
-          <item name="SMS_Empty_Draft_Support">true</item>
+          <item name="SMS_Empty_Draft_Support">false</item>
           <item name="SMS_To_Email_Support">true</item>
           <item name="SMS_Email_Server_Number">6245</item>
           <item name="SMS_Class_Zero_Save_Support">true</item>
           <item name="SMS_Concatenated_Email_SMS">false</item>
           <item name="SMS_Subject_Support">false</item>
           <item name="SMS_SMSC_Editable">true</item>
-          <item name="SMS_Empty_SMS_Support">false</item>
-          <item name="SMS_Use_Device_Time">true</item>
+          <item name="SMS_Empty_SMS_Support">true</item>
+          <item name="SMS_Use_Device_Time">false</item>
           <item name="SMS_Characters">true</item>
-          <item name="MMS_Retry_Policy">30,180,300,480</item>
+          <item name="MMS_Retry_Policy">15,15,15,15,15,15</item>
           <item name="MSG_General_CMAS_Support">true</item>
-          <item name="SMS_Priority">Normal</item>
-          <item name="SMS_Callback_Number">true</item>
-          <item name="MMS_Callback_Number">false</item>
           <item name="MSG_Use_Signature">false</item>
           <item name="Display_message_on_screen">success_and_failure</item>
-          <item name="MMS_Show_Connection_Setting">true</item>
           <item name="MMS_Show_All_Mixed_Text">false</item>
           <item name="RECIPT_Input_Type_Number">false</item>
           <item name="MMS_Force_Display_In_Slideshow">false</item>
-          <item name="MMS_Show_Restricted_Mode">true</item>
+          <item name="MMS_Show_Restricted_Mode">false</item>
           <item name="SMS_Nli_Header_Support">true</item>
-          <item name="MMS_CDMA_MMSC_Config_Tool">false</item>
-          <item name="MMS_CDMA_MMSC_Editable">true</item>
-          <item name="MSG_CMAS_First_Time_Alert_Support">true</item>
-          <item name="SMS_SMSC_Hide">true</item>
         </set>
       </function>
     </module>
@@ -469,7 +450,7 @@
       <!-- UA profile URL -->
       <function name="ua_profile">
         <set name="single">
-          <item name="value">http://uaprof.vtext.com/pcd/adr6435/adr6435.xml</item>
+          <item name="value">http://www.htcmms.com.tw/Android/Common/PN071/ua-profile.xml</item>
         </set>
       </function>
       <!-- Enable gif animation -->
@@ -554,17 +535,6 @@
     <module name="J2ME">
       <function name="ua_string">
         <set name="single" />
-      </function>
-    </module>
-  </category>
-  <category name="Sound">
-    <module name="res">
-      <function name="values">
-        <set name="single">
-          <item name="def_ringtone">file:///system/customize/resource/VZW_Airwaves_1.mp3</item>
-          <item name="def_ringtone_mode_cdma">file:///system/customize/resource/VZW_Airwaves_1.mp3</item>
-          <item name="def_ringtone_mode_wcdma">file:///system/customize/resource/VZW_Airwaves_1.mp3</item>
-        </set>
       </function>
     </module>
   </category>

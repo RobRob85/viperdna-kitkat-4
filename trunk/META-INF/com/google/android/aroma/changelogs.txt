@@ -8,10 +8,13 @@ Venom Tweaks
 Venom FileManager
 Venom HUB
 Venom SoundEnhancer
+Venom Button Manager
 Venom SideBar/Small Apps
 Venom PIE
+Enhanced Camera
 Busybox
 Init.D Scripts Enabled
+Cm cLock Widget (modified framework to support it)
 
 *New* Tweaks (since 2.5.x)
 
