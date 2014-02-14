@@ -15,8 +15,10 @@ Venom PIE
 Venom Camera w/ Zoe enabled
 Busybox
 Init.D Scripts Enabled
-Cm cLock Widget (modified framework to support it)
-
+Cm cLock Widget 
+      --(modified framework to support it)
+      --(routes to HTC clock app instead of aosp)
+	  
 *New* Tweaks (since 2.5.x)
 
 Statusbar
