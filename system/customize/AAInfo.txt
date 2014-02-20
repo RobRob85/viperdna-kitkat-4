@@ -1,0 +1,6 @@
+TaskID : 349770
+Project : M7_UL_K44_SENSE55_MR
+SKU : HTC Europe[401]
+ROM Ver : 4.19.401.8
+Customization Id : 665669
+RCMS Id : 553
