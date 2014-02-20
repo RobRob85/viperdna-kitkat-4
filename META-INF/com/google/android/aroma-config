@@ -1,0 +1,239 @@
+﻿##
+#
+# AROMA Installer - Team Venom
+#       (c) 2011-2012 by Ahmad Amarullah
+#           amarullz - xda-developers
+#           http://www.amarullz.com/
+#
+#       Binary Version  : 2.70RC1
+#       Binary Codename : Flamboyan
+#
+##
+
+ini_set("rom_name",             "ViperDNA");
+ini_set("rom_version",          "3.1.0");
+ini_set("rom_author",           "Team Venom");
+ini_set("rom_device",           "HTC Droid DNA");
+
+
+   anisplash(1, "splash/a1", 50, "splash/a2", 50, "splash/a3", 50, "splash/a4", 50, "splash/a5", 50, "splash/a6", 3750);
+
+ini_set("force_colorspace","rgba");
+ini_set("dp","6");
+
+fontresload( "0", "ttf/DroidSans.ttf", "12" );
+fontresload( "1", "ttf/DroidSans.ttf", "18" );
+
+theme("venom_sense5");
+
+viewbox(
+  "Welcome",
+    "\n\n\n\n\n"+
+    "           	You're about to flash\n<b>"+
+    ini_get("rom_name") + "</b> by <b> " + ini_get("rom_author") +  
+    "</b>\n\n\n"+
+    "  Version: <#c00>" + ini_get("rom_version") + "</#>\n"+
+    "  Device: <#c00>" + ini_get("rom_device") + "</#>\n\n\n"+
+    "Press Next to continue the installation...",
+  "icons/info"
+); 
+
+agreebox(
+  "Terms Of Use",
+  "Please read the The Terms of Use ...",
+  "icons/agreement",
+  resread("agreement.txt"),
+  "I Agree with the Terms Of Use...",
+  "Please check the agreement..."
+);
+
+textbox(
+  "credits",
+  "ViperDNA Credits",
+  "icons/info",
+ resread("credits.txt")
+);
+
+textbox(
+  "Changelog",
+  "ViperDNA Changelog",
+  "icons/info",
+ resread("changelogs.txt")
+);
+
+########################Carriers##############################
+
+menubox(
+  "Provider",
+  "Please select:",
+  "icons/apps",
+  "network.prop",
+
+    "Verizon","","@vzw",
+    "GSM","","@gsm"
+);
+
+if
+    file_getprop("/tmp/aroma/network.prop","selected") == "1"
+then
+  writetmpfile(
+    "bigred.prop",
+      "selected=0\n"
+      
+  );
+endif;
+
+if
+    file_getprop("/tmp/aroma/network.prop","selected") == "2"
+then
+
+  writetmpfile(
+    "mabell.prop",
+      "selected=0\n"
+      
+  );
+endif;
+
+########################Launcher##############################
+
+menubox(
+  "Launcher Options",
+  "Please select preferred launcher below:",
+  "icons/apps",
+  "launcher.prop",
+
+  
+  "Sense","","@htc",
+  "Google Home","","@google"
+);
+
+if prop("launcher.prop","selected")=="1"  then
+  writetmpfile("desense.prop", "selected.0=1\n");
+
+else
+selectbox(
+  "You chose to remove Prism",
+  "Do you want the rest of Sense?",
+  "icons/apps",
+  "desense.prop",
+  
+  "No","Do not remove Sense",1,
+  "Yes","PRISM and widgets will be deleted",0
+);
+
+endif; 
+
+########################App Removal##############################
+
+checkbox(
+  "Remove HTC Apps",
+  "Check the ones you want to de-install",
+  "icons/personalize",
+  "htc.prop",
+  
+		"HTC Flashlight",       "",  0,  
+		"HTC Notes",            "",  0,
+		"HTC Gallery",          "",  0,
+		"HTC Live Wallpapers",  "",  0,
+		"HTC Mail",             "",  0,  
+		"HTC Messages",         "",  0,
+		"HTC Music",            "",  0,
+		"HTC Task",             "",  0,
+		"HTC Stocks",           "",  0,
+		"HTC Weather",          "",  0,
+		"HTC WorldClock",       "",  0,
+		"HTC TaskManager",      "",  0,
+		"HTC Car",              "",  0, 
+		"HTC Sound Recorder",   "",  0, 
+		"HTC Browser",          "",  0, 
+		"HTC Calculator",       "",  0, 
+		"HTC Calendar",         "",  0
+);
+
+checkbox(
+  "Remove Google and Market Apps",
+  "Check the ones you want to de-install",
+  "icons/personalize",
+  "remove.prop",
+  
+		"Google Voice",  		"",  0,
+  		"Facebook",             "",  0,
+		"Flickr",               "",  0,
+		"Twitter",              "",  0,
+		"DropBox",              "",  0,
+		"Picasa",               "",  0,
+		"Gmail",                "",  0,
+		"YouTube",              "",  0,
+		"TalkBack",             "",  0,
+		"FaceLock",             "",  0,
+		"Google Plus",          "",  0,
+		"Google Maps",          "",  0,
+		"Google News",          "",  0,
+		"Google Hangout",       "",  0,
+		"Google TTS",           "",  0,
+		"Google Books",         "",  0, 
+		"TuneIn Radio",         "",  0,
+		"SoundHound",           "",  0,
+		"Titanium Backup",      "",  0,
+		"Google Videos", 		"",  0,
+		"Google Magazines",     "",  0,	
+		"JetCet Print",         "",  0
+);
+
+#######################################################
+
+menubox(
+  "Install",
+  "Ready to install",
+  "@info",
+  "menu.prop",
+  "Install Rom","","@install",
+  "Stop installation","","@default"
+);
+
+if prop("menu.prop","selected")=="2"
+then
+  exit("");
+endif;
+
+setvar("retstatus",
+install(
+  "Installing",
+  "Installing " + ini_get("rom_name") + " " + ini_get("rom_version") + 
+  "...\nPlease wait until it's finished...",
+  "@install")
+);
+
+
+#Save installation config
+resexec("scripts/save.sh");
+
+ini_set("text_next", "Finish");
+
+if getvar("retstatus")=="0" then
+  viewbox(
+   "Installation Completed",
+  "<#c00>Congratulations...</#>\n\n"+
+  ini_get("rom_name") + " " + ini_get("rom_version") + " has been installed successfully.\n\n"+
+  "Tap Finish, and Reboot your phone.\n\nThanks.",
+  "@info"
+);
+if
+  confirm(
+      "Reboot",
+      "Reboot Now?",
+      "icons/info",
+      "Yes",
+      "No"
+  )=="yes"
+then
+  reboot("onfinish");
+endif;
+else
+   viewbox("Installation Failed","\n\nInstaller Status: "+ getvar("retstatus"),"@alert");
+endif;
+
+
+
+
+

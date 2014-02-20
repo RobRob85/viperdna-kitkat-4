@@ -1,0 +1,105 @@
+ViperDNA 3.1.0 Release Candidate ---- Team Venom 
+Updated to Android 4.4.2 / Sense 5.5
+Rom Base : 4.19.401.8 CL304164 release-keys
+Kernel: Zarboz Stock 3.4.10 for 4.4; M7 Based
+Tweaks Based ViperONE 5.0.0 
+
+All previous Tweaks from 3.0.0 included
+
+New Venom Hub  - registration is now required!
+Venom Downloads UI with ability to specify download folder based on file extensions
+New tweak to customize folder style in Sense Launcher
+New tweak to customize folder background in Sense Launcher
+New tweak to switch phone button icons between graphics and text
+Fixed issue with camera resolution maxing out at 4 mp
+
+Previous KitKat Changelogs:
+
+ViperDNA 3.0.0 Release Candidate ---- Team Venom 
+
+Updated to Android 4.4 / Sense 5.5
+Rom Base : 4.06.1540.3 CL283265 release-keys
+Kernel: Zarboz Stock 3.4.10 for 4.4; M7 Based
+Tweaks Based ViperONE 4.3.0  
+Venom SuperUSER
+Venom Tweaks
+Venom FileManager
+Venom HUB
+Venom SoundEnhancer
+Venom Button Manager
+Venom SideBar/Small Apps
+Venom PIE
+Venom Camera w/ Zoe enabled
+Busybox
+Init.D Scripts Enabled
+Cm cLock Widget 
+      --(modified framework to support it)
+      --(routes to HTC clock app instead of aosp)
+	  
+*New* Tweaks (since 2.5.x)
+
+Statusbar
+change icon size in quickpanel and heqs (s/m/l)
+native (stock android) quick setting column count
+display signal (wifi/data) icons on left of statusbar
+display battery on left of status bar
+custom contacts widget on notification panel
+show/hide edit button statbar pulldown panel
+show/hide settings button on statbar pulldown panel
+run custom app instead of settings on statbar pulldown
+hide ram meter in recent apps 
+double tap statbar to turn screen off
+
+Prism
+venom navbars from 2.0.x are back
+icon packs are no longer buggy with app drawer icon (issue in 2.5.x)
+custom app for app drawer shorcut
+homescreen layouts (4x4,4x5,5x6)
+add any (up to several) custom apps to prism homescreen menu, and reorder/remove exist ones
+hide navbar in app drawer
+enable/disable landscape on homescreen
+
+Colors
+icon tinting!: change signal/battery or all icons to a specific color
+use stock/gradient/or non transparent statusbar
+change color of pending notification count
+change virtually every possible text color in statusbar
+change virtually every possible color in prism weather panel
+change lockscreen pattern trace color
+change blinkfeed color
+
+Lockscreen
+add back home swipe on lockscreen option
+go to first widget page on unlock
+custom lockscreen background (removed from sense by htc)
+bypass lockscreen/no lock option (removed from sense by htc)
+show next alarm under carrier label
+
+Buttons/Gestures
+configure button brightness strength
+system, home, back, and recent long press delays
+double press interval for home and back keys
+double press actions for home and back keys
+home swipe key configuration returns
+
+Venom Pie
+returned from ViperDNA 2.0.x
+
+Misc
+Permission Manager
+Enable apm on lockscreen
+use JB toast style instead of kitkat toast message style
+hide 4.3/4.4 notifications
+hide volume warning when using high volumes
+custom notification screen from any app
+display wifi activity (like data icon) from aosp
+choose different signal icons (verizon, new sprint, att, tmo, lte, stock sense)
+5 or 6 signal bar count
+always display data icon even when connected to wifi
+block pulldown during calls
+
+Xposed
+install xposed from tweaks
+
+more im missing im sure!
+
