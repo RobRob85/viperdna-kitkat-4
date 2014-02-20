@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tweaks>
+   <action name='setup'>
+      <donation>
+         <app name='Standard  2$' package='com.m0narx.ViperOneProBronze'/>
+         <app name='Silver 5$' package='com.m0narx.ViperOneProSilver'/>
+         <app name='Gold 10$' package='com.m0narx.ViperOneProGold'/>
+         <app name='Black 20$' package='com.m0narx.ViperOneProBlack'/>
+         <app name='Platinum 50$' package='com.m0narx.ViperOneProPlatin'/>
+         <app name='Diamond 100$' package='com.m0narx.ViperOneProDiamond'/>
+      </donation>
+   </action>
+</tweaks>
