@@ -1,0 +1,89 @@
+#!/system/bin/sh
+echo "98checksettings"
+
+. /system/xbin/venom_functions.sh
+
+# VenomSuperUser
+/system/xbin/su --daemon &
+
+#SysRW
+if [ "`read_sys_setting tweaks_system_rw 1`" = "1" ]; then
+    echo "Mounting /system as RW";
+    mount -o remount,rw /system;
+else
+    echo "Mounting /system as RO";
+    mount -o remount,ro /system;
+fi
+
+#Disable log cat on boot
+if [ "`read_sys_setting tweaks_disable_logcat 0`" = "1" ]; then
+    echo "Disabling logcat";
+    rm /dev/log/main;
+fi
+
+#Adb icon
+if [ "`read_sys_setting tweaks_show_adb_icon 1`" = "1" ]; then
+    echo "Enabling ADB icon";
+    setprop persist.adb.notify 1
+else
+    echo "Disabling ADB icon";
+    setprop persist.adb.notify 0
+fi
+
+#Setup volume wake
+if [ "`read_sys_setting tweaks_use_volume 0`" = "1" ]; then
+	if [ -e "/sys/keyboard/vol_wakeup" ]; then
+	   chmod 755 /sys/keyboard/vol_wakeup
+	   echo "Enabling volume wake";
+	   VOLUME_WAKE=`read_sys_setting tweaks_use_volume 0`;
+	   echo $VOLUME_WAKE > /sys/keyboard/vol_wakeup;
+	   chmod 444 /sys/keyboard/vol_wakeup
+	fi
+fi
+
+#Beats headset
+echo Enable custom headset
+mkdir -p /dev/venom/htc_accessory/headset;
+chmod -R 777 /dev/venom;
+chown 1000:1000 /dev/venom;
+chown 1000:1000 /dev/venom/htc_accessory;
+chown 1000:1000 /dev/venom/htc_accessory/headset;
+
+HEADSET=`read_sys_setting tweaks_headset others`
+echo -n "$HEADSET" > /dev/venom/htc_accessory/headset/state;
+chmod 0644 /dev/venom/htc_accessory/headset/state;
+chown 1000:1000 /dev/venom/htc_accessory/headset/state;
+
+#ZRAM Configuration
+#ZRAM_SIZE=`read_sys_setting tweaks_zram 67104768`;
+#ZRAM_DEVS=`read_sys_setting tweaks_zram_devs 3`;
+
+# disabale ZRAM
+#echo Disabling ZRAM;
+#remove swap
+#for dev in `busybox ls -d --color=never /dev/block/zram*`
+#do
+#	swapoff $dev
+#done
+# set ramdisk size to 0
+#rmmod zram
+
+#if [ ! "$ZRAM_SIZE" = "0" ] && [ ! "$ZRAM_DEVS" = "0" ]; then
+#	ZRAM_SIZE_MB=`expr $ZRAM_SIZE / 1024 / 1024`;
+#	echo Enabling $ZRAM_DEVS ZRAM devices $ZRAM_SIZE_MB Mb each;
+#	# enable ZRAM
+#	insmod /system/lib/modules/zram.ko num_devices=$ZRAM_DEVS;
+#	for sys in `busybox ls -d --color=never /sys/block/zram*`
+#	do
+#		echo $ZRAM_SIZE > $sys/disksize
+#	done
+#	for dev in `busybox ls -d --color=never /dev/block/zram*`
+#	do
+#		mkswap $dev
+#		swapon -p 15 $dev
+#	done
+#fi
+
+
+
+echo "98checksettings Done."
