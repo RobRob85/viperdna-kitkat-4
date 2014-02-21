@@ -501,7 +501,7 @@
   <item type="boolean" name="message_mms_support_attach_location">true</item>
   <item type="boolean" name="message_mms_support_device_timeout">true</item>
   <item type="boolean" name="message_mms_support_download_expired_mms">true</item>
-  <item type="boolean" name="message_mms_support_group_message">false</item>
+  <item type="boolean" name="message_mms_support_group_message">true</item>
   <item type="boolean" name="message_mms_support_header_proxy_authorization">false</item>
   <item type="boolean" name="message_mms_support_ipv6">true</item>
   <item type="boolean" name="message_mms_support_low_balance_notification">false</item>
