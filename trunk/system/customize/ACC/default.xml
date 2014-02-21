@@ -747,7 +747,7 @@
   <item type="boolean" name="support_minor_quicksettings">false</item>
 </app>
 <app name="Tethering_provision">
-  <item type="integer" name="TetheringGuard_Rule">1</item>
+  <item type="integer" name="TetheringGuard_Rule">0</item>
 </app>
 <app name="TMOUS_IMS">
   <item type="boolean" name="enable_wifi_ims">false</item>
