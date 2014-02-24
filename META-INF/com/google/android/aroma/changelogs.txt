@@ -1,4 +1,5 @@
-ViperDNA 3.1.0 Release Candidate ---- Team Venom 
+*ViperDNA 3.1.0 Release Candidate ---- Team Venom 
+
 Updated to Android 4.4.2 / Sense 5.5
 Rom Base : 4.19.401.8 CL304164 release-keys
 Kernel: Zarboz Stock 3.4.10 for 4.4; M7 Based
@@ -11,11 +12,14 @@ Venom Downloads UI with ability to specify download folder based on file extensi
 New tweak to customize folder style in Sense Launcher
 New tweak to customize folder background in Sense Launcher
 New tweak to switch phone button icons between graphics and text
-Fixed issue with camera resolution maxing out at 4 mp
 
 Previous KitKat Changelogs:
 
-ViperDNA 3.0.0 Release Candidate ---- Team Venom 
+*ViperDNA 3.0.1 OTA
+Fixed issue with camera resolution maxing out at 4 mp
+
+
+*ViperDNA 3.0.0 Release Candidate
 
 Updated to Android 4.4 / Sense 5.5
 Rom Base : 4.06.1540.3 CL283265 release-keys
