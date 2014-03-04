@@ -12,6 +12,8 @@ Venom Downloads UI with ability to specify download folder based on file extensi
 New tweak to customize folder style in Sense Launcher
 New tweak to customize folder background in Sense Launcher
 New tweak to switch phone button icons between graphics and text
+New tweak to enable full screen weather animation from sense4 upon screen unlock
+
 
 Previous KitKat Changelogs:
 
