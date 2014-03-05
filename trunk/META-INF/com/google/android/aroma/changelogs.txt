@@ -14,6 +14,8 @@ New tweak to customize folder background in Sense Launcher
 New tweak to switch phone button icons between graphics and text
 New tweak to enable full screen weather animation from sense4 upon screen unlock
 
+Updated: Titanium Back, SoundHound, Google Plus, Tune In Player, Facebook, Google Maps, and Hangouts
+
 
 Previous KitKat Changelogs:
 
