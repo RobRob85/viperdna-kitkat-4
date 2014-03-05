@@ -493,6 +493,6 @@ assert(unmount("/data") || ui_print("(data is unmounted already)"));
 assert(unmount("/system") || ui_print("(system is unmounted already)"));
 set_progress(1.0);
 ui_print("");
-ui_print("Installation ViperDNA Android 4.4 Sense 5.5 Completed!");
+ui_print("Installation ViperDNA Android 4.4.2 Sense 5.5 Completed!");
 run_program("/sbin/busybox", "cp", "/tmp/recovery.log", "/sdcard/recovery.log");
 run_program("/sbin/sleep", "5");
